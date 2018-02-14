@@ -7,9 +7,21 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class TemplateController {
 	
-	@RequestMapping("/CBETemplate")
-	public String home(Model model) {
+	@RequestMapping("/header")
+	public String header(Model model) {
 		//model.addAttribute("name" , "Manar");
-		return "CBETemplate";
+		return "header";
+	}
+	
+	@RequestMapping("/sidebar")
+	public String sidebar(Model model) {
+		//model.addAttribute("name" , "Manar");
+		return "sidebar";
+	}
+	
+	@RequestMapping("/footer")
+	public String footer(Model model) {
+		//model.addAttribute("name" , "Manar");
+		return "footer";
 	}
 }

@@ -1,6 +1,8 @@
 package com.egabi.cbe.model;
 
 import java.io.Serializable;
+
+import javax.persistence.Entity;
 import javax.persistence.*;
 import java.util.Date;
 

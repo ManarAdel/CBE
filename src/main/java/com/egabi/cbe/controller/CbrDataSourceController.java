@@ -1,5 +1,7 @@
 package com.egabi.cbe.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,6 +22,12 @@ public class CbrDataSourceController {
 	public String saveCbrDataSource(@RequestBody CbrDataSource c)
 	{
 		return service.insertCbrDataSource(c);
+		
+	}
+	@RequestMapping("/All")
+	public List<?> getAllCbrDataSource()
+	{
+		return service.getAllCbrDatasource();
 		
 	}
 }
