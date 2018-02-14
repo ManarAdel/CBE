@@ -14,6 +14,14 @@ import java.util.Date;
 @NamedQuery(name="CbeCustmerData.findAll", query="SELECT c FROM CbeCustmerData c")
 public class CbeCustmerData implements Serializable {
 	private static final long serialVersionUID = 1L;
+	
+	
+	//This Table Doesn't have A PK 
+	//Generated Id 
+	@Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    private Long id;
+
 
 	@Temporal(TemporalType.DATE)
 	@Column(name="BIRTH_DATE")

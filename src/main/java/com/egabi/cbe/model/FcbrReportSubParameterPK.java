@@ -42,6 +42,7 @@ public class FcbrReportSubParameterPK implements Serializable {
 		this.rowId = rowId;
 	}
 
+	@Override
 	public boolean equals(Object other) {
 		if (this == other) {
 			return true;
@@ -56,6 +57,7 @@ public class FcbrReportSubParameterPK implements Serializable {
 			&& (this.rowId == castOther.rowId);
 	}
 
+	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int hash = 17;

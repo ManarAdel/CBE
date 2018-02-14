@@ -14,6 +14,14 @@ import java.math.BigDecimal;
 @NamedQuery(name="FusersSessionsStatus.findAll", query="SELECT f FROM FusersSessionsStatus f")
 public class FusersSessionsStatus implements Serializable {
 	private static final long serialVersionUID = 1L;
+	
+	
+	//This Table Doesn't have A PK 
+	//Generated Id 
+	@Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    private Long id;
+
 
 	@Column(name="INST_ID")
 	private BigDecimal instId;

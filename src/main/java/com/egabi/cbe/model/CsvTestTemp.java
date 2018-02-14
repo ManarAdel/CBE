@@ -13,6 +13,12 @@ import javax.persistence.*;
 @NamedQuery(name="CsvTestTemp.findAll", query="SELECT c FROM CsvTestTemp c")
 public class CsvTestTemp implements Serializable {
 	private static final long serialVersionUID = 1L;
+	
+		//This Table Doesn't have A PK 
+		//Generated Id 
+		@Id
+	    @GeneratedValue(strategy=GenerationType.IDENTITY)
+	    private Long id;
 
 	@Column(name="BRANCH_CODE")
 	private String branchCode;

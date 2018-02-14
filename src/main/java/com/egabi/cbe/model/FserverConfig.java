@@ -15,6 +15,12 @@ import java.math.BigDecimal;
 public class FserverConfig implements Serializable {
 	private static final long serialVersionUID = 1L;
 
+	//This Table Doesn't have A PK 
+	//Generated Id 
+	@Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    private Long id;
+
 	@Column(name="\"HOST\"")
 	private String host;
 

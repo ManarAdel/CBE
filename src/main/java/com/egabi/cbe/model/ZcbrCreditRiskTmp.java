@@ -15,6 +15,14 @@ import java.util.Date;
 @NamedQuery(name="ZcbrCreditRiskTmp.findAll", query="SELECT z FROM ZcbrCreditRiskTmp z")
 public class ZcbrCreditRiskTmp implements Serializable {
 	private static final long serialVersionUID = 1L;
+	
+	
+	//This Table Doesn't have A PK 
+	//Generated Id 
+	@Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    private Long id;
+
 
 	@Column(name="BBG_ORR")
 	private BigDecimal bbgOrr;

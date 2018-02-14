@@ -15,6 +15,15 @@ import java.util.Date;
 @NamedQuery(name="AubBaseTableOld.findAll", query="SELECT a FROM AubBaseTableOld a")
 public class AubBaseTableOld implements Serializable {
 	private static final long serialVersionUID = 1L;
+	
+	
+	//This Table Doesn't have A PK 
+	//Generated Id 
+	@Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    private Long id;
+	
+
 
 	@Column(name="A_C")
 	private BigDecimal aC;

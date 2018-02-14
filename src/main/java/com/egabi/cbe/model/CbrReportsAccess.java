@@ -26,12 +26,12 @@ public class CbrReportsAccess implements Serializable {
 
 	//bi-directional many-to-one association to FcbrReportParameter
 	@ManyToOne
-	@JoinColumn(name="REPORT_ID")
+	@JoinColumn(name="REPORT_ID" , insertable = false , updatable = false)
 	private FcbrReportParameter fcbrReportParameter;
 
 	//bi-directional many-to-one association to Frole
 	@ManyToOne
-	@JoinColumn(name="ROLE_ID")
+	@JoinColumn(name="ROLE_ID" , insertable = false , updatable = false)
 	private Frole frole;
 
 	public CbrReportsAccess() {

@@ -13,6 +13,12 @@ import java.math.BigDecimal;
 @NamedQuery(name="Tt2.findAll", query="SELECT t FROM Tt2 t")
 public class Tt2 implements Serializable {
 	private static final long serialVersionUID = 1L;
+	
+		//This Table Doesn't have A PK 
+		//Generated Id 
+		@Id
+	    @GeneratedValue(strategy=GenerationType.IDENTITY)
+	    private Long id;
 
 	private String account;
 

@@ -14,6 +14,12 @@ import java.util.Date;
 @NamedQuery(name="GlMapping.findAll", query="SELECT g FROM GlMapping g")
 public class GlMapping implements Serializable {
 	private static final long serialVersionUID = 1L;
+	
+	//This Table Doesn't have A PK 
+	//Generated Id 
+	@Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    private Long id;
 
 	private String br;
 

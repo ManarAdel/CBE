@@ -51,6 +51,7 @@ public class CbrIscoreConsCPK implements Serializable {
 		this.dataProviderIdenCode = dataProviderIdenCode;
 	}
 
+	@Override
 	public boolean equals(Object other) {
 		if (this == other) {
 			return true;
@@ -66,6 +67,7 @@ public class CbrIscoreConsCPK implements Serializable {
 			&& this.dataProviderIdenCode.equals(castOther.dataProviderIdenCode);
 	}
 
+	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int hash = 17;

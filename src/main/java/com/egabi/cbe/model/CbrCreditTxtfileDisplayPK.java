@@ -42,6 +42,7 @@ public class CbrCreditTxtfileDisplayPK implements Serializable {
 		this.repFormat = repFormat;
 	}
 
+	@Override
 	public boolean equals(Object other) {
 		if (this == other) {
 			return true;
@@ -56,6 +57,7 @@ public class CbrCreditTxtfileDisplayPK implements Serializable {
 			&& this.repFormat.equals(castOther.repFormat);
 	}
 
+	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int hash = 17;

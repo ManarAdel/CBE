@@ -16,6 +16,12 @@ import java.util.Date;
 public class FusersPassHist implements Serializable {
 	private static final long serialVersionUID = 1L;
 
+		//This Table Doesn't have A PK 
+		//Generated Id 
+		@Id
+	    @GeneratedValue(strategy=GenerationType.IDENTITY)
+	    private Long id;
+		
 	@Temporal(TemporalType.DATE)
 	@Column(name="AUDIT_DATETIME")
 	private Date auditDatetime;

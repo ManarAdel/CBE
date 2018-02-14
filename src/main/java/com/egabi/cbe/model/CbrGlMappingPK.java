@@ -78,6 +78,7 @@ public class CbrGlMappingPK implements Serializable {
 		this.centerCode = centerCode;
 	}
 
+	@Override
 	public boolean equals(Object other) {
 		if (this == other) {
 			return true;
@@ -96,6 +97,7 @@ public class CbrGlMappingPK implements Serializable {
 			&& this.centerCode.equals(castOther.centerCode);
 	}
 
+	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int hash = 17;

@@ -32,6 +32,7 @@ public class FroleFuncPK implements Serializable {
 		this.progid = progid;
 	}
 
+	@Override
 	public boolean equals(Object other) {
 		if (this == other) {
 			return true;
@@ -45,6 +46,7 @@ public class FroleFuncPK implements Serializable {
 			&& (this.progid == castOther.progid);
 	}
 
+	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int hash = 17;

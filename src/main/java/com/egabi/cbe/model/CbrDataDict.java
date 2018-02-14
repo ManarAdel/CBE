@@ -23,7 +23,7 @@ public class CbrDataDict implements Serializable {
 
 	//bi-directional many-to-one association to CbrDataSource
 	@ManyToOne
-	@JoinColumn(name="SOURCE_NAME")
+	@JoinColumn(name="SOURCE_NAME" , insertable = false , updatable = false)
 	private CbrDataSource cbrDataSource;
 
 	public CbrDataDict() {

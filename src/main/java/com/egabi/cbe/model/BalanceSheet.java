@@ -13,6 +13,15 @@ import javax.persistence.*;
 @NamedQuery(name="BalanceSheet.findAll", query="SELECT b FROM BalanceSheet b")
 public class BalanceSheet implements Serializable {
 	private static final long serialVersionUID = 1L;
+	
+	
+	//This Table Doesn't have A PK 
+	//Generated Id 
+	@Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    private Long id;
+	
+
 
 	@Column(name="ACCOUNT_BALANCE")
 	private String accountBalance;

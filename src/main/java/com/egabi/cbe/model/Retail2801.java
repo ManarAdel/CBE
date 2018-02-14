@@ -14,6 +14,12 @@ import java.util.Date;
 @NamedQuery(name="Retail2801.findAll", query="SELECT r FROM Retail2801 r")
 public class Retail2801 implements Serializable {
 	private static final long serialVersionUID = 1L;
+	
+	//This Table Doesn't have A PK 
+	//Generated Id 
+	@Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    private Long id;
 
 	private BigDecimal balance;
 

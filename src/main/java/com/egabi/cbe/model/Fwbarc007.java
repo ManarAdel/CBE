@@ -13,6 +13,13 @@ import java.math.BigDecimal;
 @NamedQuery(name="Fwbarc007.findAll", query="SELECT f FROM Fwbarc007 f")
 public class Fwbarc007 implements Serializable {
 	private static final long serialVersionUID = 1L;
+	
+	//This Table Doesn't have A PK 
+	//Generated Id 
+	@Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    private Long id;
+
 
 	@Column(name="REP_ID")
 	private BigDecimal repId;

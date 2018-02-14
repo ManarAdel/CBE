@@ -20,8 +20,8 @@ public class CbrCreditParamDetail implements Serializable {
 	//bi-directional many-to-one association to CbrCreditParam
 	@ManyToOne
 	@JoinColumns({
-		@JoinColumn(name="CBR_TYPE", referencedColumnName="CBR_TYPE"),
-		@JoinColumn(name="POT_ACT_FLAG", referencedColumnName="POT_ACT_FLAG")
+		@JoinColumn(name="CBR_TYPE", referencedColumnName="CBR_TYPE", insertable = false , updatable = false),
+		@JoinColumn(name="POT_ACT_FLAG", referencedColumnName="POT_ACT_FLAG", insertable = false , updatable = false)
 		})
 	private CbrCreditParam cbrCreditParam;
 

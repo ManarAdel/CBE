@@ -15,6 +15,14 @@ import java.util.Date;
 @NamedQuery(name="ProdMapping.findAll", query="SELECT p FROM ProdMapping p")
 public class ProdMapping implements Serializable {
 	private static final long serialVersionUID = 1L;
+	
+	
+	//This Table Doesn't have A PK 
+	//Generated Id 
+	@Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    private Long id;
+	
 
 	@Column(name="BAL_SIGN")
 	private String balSign;

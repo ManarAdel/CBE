@@ -42,6 +42,7 @@ public class LgLcMarginPK implements Serializable {
 		this.currencyCode = currencyCode;
 	}
 
+	@Override
 	public boolean equals(Object other) {
 		if (this == other) {
 			return true;
@@ -56,6 +57,7 @@ public class LgLcMarginPK implements Serializable {
 			&& this.currencyCode.equals(castOther.currencyCode);
 	}
 
+	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int hash = 17;

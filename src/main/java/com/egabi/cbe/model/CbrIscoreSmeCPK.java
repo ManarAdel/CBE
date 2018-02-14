@@ -51,6 +51,7 @@ public class CbrIscoreSmeCPK implements Serializable {
 		this.subjectCode = subjectCode;
 	}
 
+	@Override
 	public boolean equals(Object other) {
 		if (this == other) {
 			return true;
@@ -66,6 +67,7 @@ public class CbrIscoreSmeCPK implements Serializable {
 			&& this.subjectCode.equals(castOther.subjectCode);
 	}
 
+	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int hash = 17;

@@ -15,6 +15,12 @@ import java.util.Date;
 @NamedQuery(name="DiscountingTfV.findAll", query="SELECT d FROM DiscountingTfV d")
 public class DiscountingTfV implements Serializable {
 	private static final long serialVersionUID = 1L;
+	
+	//This Table Doesn't have A PK 
+	//Generated Id 
+	@Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    private Long id;
 
 	private BigDecimal amount;
 

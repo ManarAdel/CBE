@@ -13,7 +13,15 @@ import javax.persistence.*;
 @NamedQuery(name="GeneralLedgerBalTemp.findAll", query="SELECT g FROM GeneralLedgerBalTemp g")
 public class GeneralLedgerBalTemp implements Serializable {
 	private static final long serialVersionUID = 1L;
-
+	
+	
+	//This Table Doesn't have A PK 
+	//Generated Id 
+	@Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    private Long id;
+	
+	
 	@Column(name="ACCOUNT_BALANCE")
 	private String accountBalance;
 

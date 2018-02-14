@@ -15,6 +15,12 @@ import java.util.Date;
 @NamedQuery(name="Bonds1501P18.findAll", query="SELECT b FROM Bonds1501P18 b")
 public class Bonds1501P18 implements Serializable {
 	private static final long serialVersionUID = 1L;
+	
+		//This Table Doesn't have A PK 
+		//Generated Id 
+		@Id
+	    @GeneratedValue(strategy=GenerationType.IDENTITY)
+	    private Long id;
 
 	private String bonds;
 

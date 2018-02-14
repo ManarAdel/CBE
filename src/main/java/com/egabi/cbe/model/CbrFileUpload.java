@@ -14,6 +14,15 @@ import java.math.BigDecimal;
 @NamedQuery(name="CbrFileUpload.findAll", query="SELECT c FROM CbrFileUpload c")
 public class CbrFileUpload implements Serializable {
 	private static final long serialVersionUID = 1L;
+	
+	
+	//This Table Doesn't have A PK 
+	//Generated Id 
+	@Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    private Long id;
+	
+
 
 	@Lob
 	@Column(name="CSV_FILE")

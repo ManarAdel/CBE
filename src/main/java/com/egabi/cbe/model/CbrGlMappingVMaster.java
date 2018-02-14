@@ -15,6 +15,12 @@ import java.util.Date;
 @NamedQuery(name="CbrGlMappingVMaster.findAll", query="SELECT c FROM CbrGlMappingVMaster c")
 public class CbrGlMappingVMaster implements Serializable {
 	private static final long serialVersionUID = 1L;
+	
+	//This Table Doesn't have A PK 
+	//Generated Id 
+	@Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    private Long id;
 
 	private BigDecimal balance;
 

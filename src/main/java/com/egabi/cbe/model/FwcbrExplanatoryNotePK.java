@@ -41,6 +41,7 @@ public class FwcbrExplanatoryNotePK implements Serializable {
 		this.class1 = class1;
 	}
 
+	@Override
 	public boolean equals(Object other) {
 		if (this == other) {
 			return true;
@@ -55,6 +56,7 @@ public class FwcbrExplanatoryNotePK implements Serializable {
 			&& this.class1.equals(castOther.class1);
 	}
 
+	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int hash = 17;

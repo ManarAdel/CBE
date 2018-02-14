@@ -15,6 +15,14 @@ import java.math.BigDecimal;
 public class CbrGlMapping2905 implements Serializable {
 	private static final long serialVersionUID = 1L;
 
+	
+	//This Table Doesn't have A PK 
+	//Generated Id 
+	@Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    private Long id;
+	
+
 	@Column(name="ARABIC_DESCR")
 	private String arabicDescr;
 

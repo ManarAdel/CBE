@@ -15,6 +15,13 @@ import java.util.Date;
 @NamedQuery(name="CbrAutoLoadingFileName.findAll", query="SELECT c FROM CbrAutoLoadingFileName c")
 public class CbrAutoLoadingFileName implements Serializable {
 	private static final long serialVersionUID = 1L;
+	
+	//This Table Doesn't have A PK 
+	//Generated Id 
+	@Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    private Long id;
+
 
 	@Column(name="CSV_FILE_NAME")
 	private String csvFileName;

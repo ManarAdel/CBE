@@ -15,6 +15,12 @@ import java.util.Date;
 @NamedQuery(name="CustAcctVBng.findAll", query="SELECT c FROM CustAcctVBng c")
 public class CustAcctVBng implements Serializable {
 	private static final long serialVersionUID = 1L;
+	
+		//This Table Doesn't have A PK 
+		//Generated Id 
+		@Id
+	    @GeneratedValue(strategy=GenerationType.IDENTITY)
+	    private Long id;
 
 	@Column(name="ACCOUNT_BALANCE")
 	private BigDecimal accountBalance;

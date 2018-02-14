@@ -14,6 +14,12 @@ import java.math.BigDecimal;
 @NamedQuery(name="GenericLookupV.findAll", query="SELECT g FROM GenericLookupV g")
 public class GenericLookupV implements Serializable {
 	private static final long serialVersionUID = 1L;
+	
+			//This Table Doesn't have A PK 
+			//Generated Id 
+			@Id
+		    @GeneratedValue(strategy=GenerationType.IDENTITY)
+		    private Long id;
 
 	private String adescr;
 

@@ -13,6 +13,12 @@ import javax.persistence.*;
 @NamedQuery(name="FappServerMachine.findAll", query="SELECT f FROM FappServerMachine f")
 public class FappServerMachine implements Serializable {
 	private static final long serialVersionUID = 1L;
+	
+			//This Table Doesn't have A PK 
+			//Generated Id 
+			@Id
+		    @GeneratedValue(strategy=GenerationType.IDENTITY)
+		    private Long id;
 
 	@Column(name="MACHINE_NAME")
 	private String machineName;

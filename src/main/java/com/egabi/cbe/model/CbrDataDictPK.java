@@ -20,6 +20,15 @@ public class CbrDataDictPK implements Serializable {
 
 	public CbrDataDictPK() {
 	}
+	
+	
+	public CbrDataDictPK(String sourceName, String columnName) {
+		super();
+		this.sourceName = sourceName;
+		this.columnName = columnName;
+	}
+
+
 	public String getSourceName() {
 		return this.sourceName;
 	}
@@ -33,6 +42,7 @@ public class CbrDataDictPK implements Serializable {
 		this.columnName = columnName;
 	}
 
+	@Override
 	public boolean equals(Object other) {
 		if (this == other) {
 			return true;
@@ -46,6 +56,7 @@ public class CbrDataDictPK implements Serializable {
 			&& this.columnName.equals(castOther.columnName);
 	}
 
+	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int hash = 17;

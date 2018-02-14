@@ -15,6 +15,12 @@ import java.util.Date;
 @NamedQuery(name="FauditHist.findAll", query="SELECT f FROM FauditHist f")
 public class FauditHist implements Serializable {
 	private static final long serialVersionUID = 1L;
+	
+	//This Table Doesn't have A PK 
+	//Generated Id 
+	@Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    private Long id;
 
 	@Column(name="AUD_CODE")
 	private BigDecimal audCode;

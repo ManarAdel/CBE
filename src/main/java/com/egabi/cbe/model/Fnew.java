@@ -14,6 +14,13 @@ import java.util.Date;
 @NamedQuery(name="Fnew.findAll", query="SELECT f FROM Fnew f")
 public class Fnew implements Serializable {
 	private static final long serialVersionUID = 1L;
+	
+	//This Table Doesn't have A PK 
+	//Generated Id 
+	@Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    private Long id;
+
 
 	private BigDecimal brcode;
 

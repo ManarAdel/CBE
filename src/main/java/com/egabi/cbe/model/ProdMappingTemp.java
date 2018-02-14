@@ -13,6 +13,12 @@ import javax.persistence.*;
 @NamedQuery(name="ProdMappingTemp.findAll", query="SELECT p FROM ProdMappingTemp p")
 public class ProdMappingTemp implements Serializable {
 	private static final long serialVersionUID = 1L;
+	
+			//This Table Doesn't have A PK 
+			//Generated Id 
+			@Id
+		    @GeneratedValue(strategy=GenerationType.IDENTITY)
+		    private Long id;
 
 	@Column(name="BAL_SIGN")
 	private String balSign;

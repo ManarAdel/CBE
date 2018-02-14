@@ -14,6 +14,12 @@ import java.math.BigDecimal;
 @NamedQuery(name="ExcelNewRow.findAll", query="SELECT e FROM ExcelNewRow e")
 public class ExcelNewRow implements Serializable {
 	private static final long serialVersionUID = 1L;
+	
+	//This Table Doesn't have A PK 
+	//Generated Id 
+	@Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    private Long id;
 
 	@Column(name="NEW_ROW_UV")
 	private String newRowUv;

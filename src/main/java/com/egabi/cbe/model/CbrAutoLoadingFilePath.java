@@ -13,6 +13,15 @@ import javax.persistence.*;
 @NamedQuery(name="CbrAutoLoadingFilePath.findAll", query="SELECT c FROM CbrAutoLoadingFilePath c")
 public class CbrAutoLoadingFilePath implements Serializable {
 	private static final long serialVersionUID = 1L;
+	
+	
+	//This Table Doesn't have A PK 
+	//Generated Id 
+	@Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    private Long id;
+	
+
 
 	@Column(name="PATH_NAME")
 	private String pathName;

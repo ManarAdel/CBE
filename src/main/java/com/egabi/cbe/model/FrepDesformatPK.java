@@ -31,6 +31,7 @@ public class FrepDesformatPK implements Serializable {
 		this.caption = caption;
 	}
 
+	@Override
 	public boolean equals(Object other) {
 		if (this == other) {
 			return true;
@@ -44,6 +45,7 @@ public class FrepDesformatPK implements Serializable {
 			&& this.caption.equals(castOther.caption);
 	}
 
+	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int hash = 17;

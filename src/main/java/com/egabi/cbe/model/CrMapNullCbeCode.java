@@ -14,6 +14,13 @@ import java.util.Date;
 @NamedQuery(name="CrMapNullCbeCode.findAll", query="SELECT c FROM CrMapNullCbeCode c")
 public class CrMapNullCbeCode implements Serializable {
 	private static final long serialVersionUID = 1L;
+	
+	//This Table Doesn't have A PK 
+	//Generated Id 
+	@Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    private Long id;
+
 
 	@Temporal(TemporalType.DATE)
 	private Date busdate;

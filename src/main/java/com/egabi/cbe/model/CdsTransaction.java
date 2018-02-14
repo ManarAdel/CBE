@@ -14,6 +14,12 @@ import java.math.BigDecimal;
 @NamedQuery(name="CdsTransaction.findAll", query="SELECT c FROM CdsTransaction c")
 public class CdsTransaction implements Serializable {
 	private static final long serialVersionUID = 1L;
+	
+		//This Table Doesn't have A PK 
+		//Generated Id 
+		@Id
+	    @GeneratedValue(strategy=GenerationType.IDENTITY)
+	    private Long id;
 
 	@Column(name="CURRENCY_CODE")
 	private String currencyCode;

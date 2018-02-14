@@ -14,6 +14,12 @@ import java.math.BigDecimal;
 @NamedQuery(name="CbrSelectOpTest.findAll", query="SELECT c FROM CbrSelectOpTest c")
 public class CbrSelectOpTest implements Serializable {
 	private static final long serialVersionUID = 1L;
+	
+	     //This Table Doesn't have A PK 
+		//Generated Id 
+		@Id
+	    @GeneratedValue(strategy=GenerationType.IDENTITY)
+	    private Long id;
 
 	@Column(name="\"DATA\"")
 	private String data;

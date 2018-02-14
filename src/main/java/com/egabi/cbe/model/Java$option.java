@@ -13,6 +13,12 @@ import javax.persistence.*;
 @NamedQuery(name="Java$option.findAll", query="SELECT j FROM Java$option j")
 public class Java$option implements Serializable {
 	private static final long serialVersionUID = 1L;
+		
+			//This Table Doesn't have A PK 
+			//Generated Id 
+			@Id
+		    @GeneratedValue(strategy=GenerationType.IDENTITY)
+		    private Long id;
 
 	private String opt;
 

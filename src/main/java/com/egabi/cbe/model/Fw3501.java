@@ -14,6 +14,13 @@ import java.util.Date;
 @NamedQuery(name="Fw3501.findAll", query="SELECT f FROM Fw3501 f")
 public class Fw3501 implements Serializable {
 	private static final long serialVersionUID = 1L;
+	
+	
+	     //This Table Doesn't have A PK 
+		//Generated Id 
+		@Id
+	    @GeneratedValue(strategy=GenerationType.IDENTITY)
+	    private Long id;
 
 	@Column(name="ACCOUNT_NUMBER")
 	private String accountNumber;

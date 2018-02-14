@@ -15,6 +15,13 @@ import java.util.Date;
 @NamedQuery(name="DebtsSource.findAll", query="SELECT d FROM DebtsSource d")
 public class DebtsSource implements Serializable {
 	private static final long serialVersionUID = 1L;
+	
+	//This Table Doesn't have A PK 
+	//Generated Id 
+	@Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    private Long id;
+
 
 	@Temporal(TemporalType.DATE)
 	private Date busdate;

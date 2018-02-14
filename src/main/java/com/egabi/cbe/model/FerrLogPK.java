@@ -41,6 +41,7 @@ public class FerrLogPK implements Serializable {
 		this.errTime = errTime;
 	}
 
+	@Override
 	public boolean equals(Object other) {
 		if (this == other) {
 			return true;
@@ -55,6 +56,7 @@ public class FerrLogPK implements Serializable {
 			&& this.errTime.equals(castOther.errTime);
 	}
 
+	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int hash = 17;

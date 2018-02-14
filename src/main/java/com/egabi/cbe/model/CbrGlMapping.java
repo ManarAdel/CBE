@@ -28,7 +28,7 @@ public class CbrGlMapping implements Serializable {
 
 	//bi-directional many-to-one association to CbrGlMappingGroup
 	@ManyToOne
-	@JoinColumn(name="GROUP_CODE")
+	@JoinColumn(name="GROUP_CODE" , insertable = false , updatable = false)
 	private CbrGlMappingGroup cbrGlMappingGroup;
 
 	public CbrGlMapping() {

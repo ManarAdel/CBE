@@ -15,6 +15,15 @@ import java.util.Date;
 @NamedQuery(name="TreasuryBill.findAll", query="SELECT t FROM TreasuryBill t")
 public class TreasuryBill implements Serializable {
 	private static final long serialVersionUID = 1L;
+	
+	
+	//This Table Doesn't have A PK 
+	//Generated Id 
+	@Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    private Long id;
+	
+
 
 	@Temporal(TemporalType.DATE)
 	private Date busdate;

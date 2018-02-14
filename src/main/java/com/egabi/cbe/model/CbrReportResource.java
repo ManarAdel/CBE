@@ -19,7 +19,7 @@ public class CbrReportResource implements Serializable {
 
 	//bi-directional many-to-one association to FcbrReportParameter
 	@ManyToOne
-	@JoinColumn(name="REPORT_ID")
+	@JoinColumn(name="REPORT_ID", insertable = false , updatable = false)
 	private FcbrReportParameter fcbrReportParameter;
 
 	public CbrReportResource() {

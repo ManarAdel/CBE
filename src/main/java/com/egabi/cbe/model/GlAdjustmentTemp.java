@@ -13,6 +13,12 @@ import javax.persistence.*;
 @NamedQuery(name="GlAdjustmentTemp.findAll", query="SELECT g FROM GlAdjustmentTemp g")
 public class GlAdjustmentTemp implements Serializable {
 	private static final long serialVersionUID = 1L;
+	
+			//This Table Doesn't have A PK 
+			//Generated Id 
+			@Id
+		    @GeneratedValue(strategy=GenerationType.IDENTITY)
+		    private Long id;
 
 	@Column(name="ACCT_DESCRIPTION_ARB")
 	private String acctDescriptionArb;

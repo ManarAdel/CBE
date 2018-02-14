@@ -14,6 +14,12 @@ import java.util.Date;
 @NamedQuery(name="T1Cust.findAll", query="SELECT t FROM T1Cust t")
 public class T1Cust implements Serializable {
 	private static final long serialVersionUID = 1L;
+	
+	     //This Table Doesn't have A PK 
+		//Generated Id 
+		@Id
+	    @GeneratedValue(strategy=GenerationType.IDENTITY)
+	    private Long id;
 
 	@Temporal(TemporalType.DATE)
 	@Column(name="BIRTH_DATE")

@@ -15,6 +15,14 @@ import java.util.Date;
 @NamedQuery(name="T1Acc.findAll", query="SELECT t FROM T1Acc t")
 public class T1Acc implements Serializable {
 	private static final long serialVersionUID = 1L;
+	
+	
+	//This Table Doesn't have A PK 
+	//Generated Id 
+	@Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    private Long id;
+
 
 	@Column(name="ACCOUNT_BALANCE")
 	private BigDecimal accountBalance;

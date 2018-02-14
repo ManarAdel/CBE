@@ -42,6 +42,7 @@ public class CbrIscoreSmeCfPK implements Serializable {
 		this.crdFac = crdFac;
 	}
 
+	@Override
 	public boolean equals(Object other) {
 		if (this == other) {
 			return true;
@@ -56,6 +57,7 @@ public class CbrIscoreSmeCfPK implements Serializable {
 			&& this.crdFac.equals(castOther.crdFac);
 	}
 
+	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int hash = 17;

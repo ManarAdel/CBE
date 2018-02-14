@@ -15,6 +15,12 @@ import java.util.Date;
 @NamedQuery(name="SuspendedInterstVTable.findAll", query="SELECT s FROM SuspendedInterstVTable s")
 public class SuspendedInterstVTable implements Serializable {
 	private static final long serialVersionUID = 1L;
+	
+		//This Table Doesn't have A PK 
+		//Generated Id 
+		@Id
+	    @GeneratedValue(strategy=GenerationType.IDENTITY)
+	    private Long id;
 
 	@Column(name="ADDRESS1_CITY_E")
 	private String address1CityE;

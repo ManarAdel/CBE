@@ -15,6 +15,13 @@ import java.util.Date;
 @NamedQuery(name="Cbe1501Param.findAll", query="SELECT c FROM Cbe1501Param c")
 public class Cbe1501Param implements Serializable {
 	private static final long serialVersionUID = 1L;
+	
+	//This Table Doesn't have A PK 
+	//Generated Id 
+	@Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    private Long id;
+	
 
 	private String adescr;
 

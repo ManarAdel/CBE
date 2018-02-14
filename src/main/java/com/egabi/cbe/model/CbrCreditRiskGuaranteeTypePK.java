@@ -33,6 +33,7 @@ public class CbrCreditRiskGuaranteeTypePK implements Serializable {
 		this.guaranteeType = guaranteeType;
 	}
 
+	@Override
 	public boolean equals(Object other) {
 		if (this == other) {
 			return true;
@@ -46,6 +47,7 @@ public class CbrCreditRiskGuaranteeTypePK implements Serializable {
 			&& this.guaranteeType.equals(castOther.guaranteeType);
 	}
 
+	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int hash = 17;

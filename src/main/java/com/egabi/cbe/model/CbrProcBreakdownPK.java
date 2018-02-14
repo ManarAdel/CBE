@@ -60,6 +60,7 @@ public class CbrProcBreakdownPK implements Serializable {
 		this.queryId = queryId;
 	}
 
+	@Override
 	public boolean equals(Object other) {
 		if (this == other) {
 			return true;
@@ -76,6 +77,7 @@ public class CbrProcBreakdownPK implements Serializable {
 			&& (this.queryId == castOther.queryId);
 	}
 
+	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int hash = 17;

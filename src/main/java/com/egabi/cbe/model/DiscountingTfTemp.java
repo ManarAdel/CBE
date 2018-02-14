@@ -13,6 +13,14 @@ import javax.persistence.*;
 @NamedQuery(name="DiscountingTfTemp.findAll", query="SELECT d FROM DiscountingTfTemp d")
 public class DiscountingTfTemp implements Serializable {
 	private static final long serialVersionUID = 1L;
+	
+	
+	//This Table Doesn't have A PK 
+	//Generated Id 
+	@Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    private Long id;
+	
 
 	private String amount;
 

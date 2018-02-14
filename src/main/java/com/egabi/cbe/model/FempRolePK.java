@@ -33,6 +33,7 @@ public class FempRolePK implements Serializable {
 		this.roleId = roleId;
 	}
 
+	@Override
 	public boolean equals(Object other) {
 		if (this == other) {
 			return true;
@@ -46,6 +47,7 @@ public class FempRolePK implements Serializable {
 			&& (this.roleId == castOther.roleId);
 	}
 
+	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int hash = 17;

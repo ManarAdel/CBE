@@ -13,6 +13,11 @@ import javax.persistence.*;
 @NamedQuery(name="TestMoh.findAll", query="SELECT t FROM TestMoh t")
 public class TestMoh implements Serializable {
 	private static final long serialVersionUID = 1L;
+	
+	//This Table Doesn't have A PK 
+	//Generated Id 
+	@Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
 
 	@Column(name="ACC_NO")
 	private String accNo;

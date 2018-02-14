@@ -14,6 +14,15 @@ import java.math.BigDecimal;
 @NamedQuery(name="FcbrViewsTable.findAll", query="SELECT f FROM FcbrViewsTable f")
 public class FcbrViewsTable implements Serializable {
 	private static final long serialVersionUID = 1L;
+	
+	
+	//This Table Doesn't have A PK 
+	//Generated Id 
+	@Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    private Long id;
+	
+
 
 	@Column(name="INDEXES_COLUMNS1")
 	private String indexesColumns1;

@@ -26,7 +26,7 @@ public class GenericLookup implements Serializable {
 
 	//bi-directional many-to-one association to CbrLookupType
 	@ManyToOne
-	@JoinColumn(name="LOOKUP_TYPE")
+	@JoinColumn(name="LOOKUP_TYPE" , insertable = false , updatable = false)
 	private CbrLookupType cbrLookupType;
 
 	public GenericLookup() {

@@ -14,6 +14,14 @@ import java.util.Date;
 @NamedQuery(name="VwModLimit.findAll", query="SELECT v FROM VwModLimit v")
 public class VwModLimit implements Serializable {
 	private static final long serialVersionUID = 1L;
+	
+	
+	//This Table Doesn't have A PK 
+	//Generated Id 
+	@Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    private Long id;
+	
 
 	@Temporal(TemporalType.DATE)
 	@Column(name="BUSINESS_DATE")

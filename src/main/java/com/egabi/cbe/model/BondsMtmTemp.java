@@ -13,6 +13,15 @@ import javax.persistence.*;
 @NamedQuery(name="BondsMtmTemp.findAll", query="SELECT b FROM BondsMtmTemp b")
 public class BondsMtmTemp implements Serializable {
 	private static final long serialVersionUID = 1L;
+	
+	
+	//This Table Doesn't have A PK 
+	//Generated Id 
+	@Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    private Long id;
+	
+
 
 	@Column(name="ACCURED_AMOUNT")
 	private String accuredAmount;

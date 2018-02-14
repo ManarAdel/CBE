@@ -14,6 +14,14 @@ import java.util.Date;
 @NamedQuery(name="ControlFileTable.findAll", query="SELECT c FROM ControlFileTable c")
 public class ControlFileTable implements Serializable {
 	private static final long serialVersionUID = 1L;
+	
+	
+	//This Table Doesn't have A PK 
+	//Generated Id 
+	@Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    private Long id;
+
 
 	@Temporal(TemporalType.DATE)
 	private Date busdate;

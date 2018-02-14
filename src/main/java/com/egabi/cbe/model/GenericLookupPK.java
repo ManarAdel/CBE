@@ -33,6 +33,7 @@ public class GenericLookupPK implements Serializable {
 		this.lookupValue = lookupValue;
 	}
 
+	@Override
 	public boolean equals(Object other) {
 		if (this == other) {
 			return true;
@@ -46,6 +47,7 @@ public class GenericLookupPK implements Serializable {
 			&& this.lookupValue.equals(castOther.lookupValue);
 	}
 
+	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int hash = 17;

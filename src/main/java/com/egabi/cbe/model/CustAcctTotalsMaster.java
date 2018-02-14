@@ -15,6 +15,12 @@ import java.util.Date;
 @NamedQuery(name="CustAcctTotalsMaster.findAll", query="SELECT c FROM CustAcctTotalsMaster c")
 public class CustAcctTotalsMaster implements Serializable {
 	private static final long serialVersionUID = 1L;
+	
+	//This Table Doesn't have A PK 
+	//Generated Id 
+	@Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    private Long id;
 
 	@Column(name="ACCOUNT_BALANCE_EQU")
 	private BigDecimal accountBalanceEqu;

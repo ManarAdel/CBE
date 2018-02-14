@@ -14,6 +14,12 @@ import java.math.BigDecimal;
 @NamedQuery(name="FwauditDetail.findAll", query="SELECT f FROM FwauditDetail f")
 public class FwauditDetail implements Serializable {
 	private static final long serialVersionUID = 1L;
+	//This Table Doesn't have A PK 
+	//Generated Id 
+	@Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    private Long id;
+
 
 	@Column(name="ITEM_NAME")
 	private String itemName;

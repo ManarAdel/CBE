@@ -15,6 +15,12 @@ import java.util.Date;
 @NamedQuery(name="FwauditDetailsHist.findAll", query="SELECT f FROM FwauditDetailsHist f")
 public class FwauditDetailsHist implements Serializable {
 	private static final long serialVersionUID = 1L;
+	
+			//This Table Doesn't have A PK 
+			//Generated Id 
+			@Id
+		    @GeneratedValue(strategy=GenerationType.IDENTITY)
+		    private Long id;
 
 	@Temporal(TemporalType.DATE)
 	private Date busdate;

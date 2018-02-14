@@ -13,6 +13,12 @@ import javax.persistence.*;
 @NamedQuery(name="CdsKindsTemp.findAll", query="SELECT c FROM CdsKindsTemp c")
 public class CdsKindsTemp implements Serializable {
 	private static final long serialVersionUID = 1L;
+	
+		//This Table Doesn't have A PK 
+		//Generated Id 
+		@Id
+	    @GeneratedValue(strategy=GenerationType.IDENTITY)
+	    private Long id;
 
 	private String busdate;
 

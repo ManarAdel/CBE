@@ -33,6 +33,7 @@ public class FkillSessionLinkPK implements Serializable {
 		this.instId = instId;
 	}
 
+	@Override
 	public boolean equals(Object other) {
 		if (this == other) {
 			return true;
@@ -46,6 +47,7 @@ public class FkillSessionLinkPK implements Serializable {
 			&& (this.instId == castOther.instId);
 	}
 
+	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int hash = 17;

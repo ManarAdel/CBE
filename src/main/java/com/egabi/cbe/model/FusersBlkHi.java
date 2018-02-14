@@ -15,6 +15,12 @@ import java.util.Date;
 @NamedQuery(name="FusersBlkHi.findAll", query="SELECT f FROM FusersBlkHi f")
 public class FusersBlkHi implements Serializable {
 	private static final long serialVersionUID = 1L;
+	
+			//This Table Doesn't have A PK 
+			//Generated Id 
+			@Id
+		    @GeneratedValue(strategy=GenerationType.IDENTITY)
+		    private Long id;
 
 	@Column(name="AUD_USRNO")
 	private BigDecimal audUsrno;

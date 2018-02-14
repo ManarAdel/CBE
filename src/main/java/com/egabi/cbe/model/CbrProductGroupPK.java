@@ -42,6 +42,7 @@ public class CbrProductGroupPK implements Serializable {
 		this.subAcct = subAcct;
 	}
 
+	@Override
 	public boolean equals(Object other) {
 		if (this == other) {
 			return true;
@@ -56,6 +57,7 @@ public class CbrProductGroupPK implements Serializable {
 			&& this.subAcct.equals(castOther.subAcct);
 	}
 
+	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int hash = 17;

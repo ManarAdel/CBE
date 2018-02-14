@@ -14,6 +14,12 @@ import java.util.Date;
 @NamedQuery(name="Exp1.findAll", query="SELECT e FROM Exp1 e")
 public class Exp1 implements Serializable {
 	private static final long serialVersionUID = 1L;
+	
+			//This Table Doesn't have A PK 
+			//Generated Id 
+			@Id
+		    @GeneratedValue(strategy=GenerationType.IDENTITY)
+		    private Long id;
 
 	@Column(name="ACCOUNT_NUMBER")
 	private String accountNumber;
