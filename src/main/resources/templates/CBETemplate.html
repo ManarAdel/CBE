@@ -34,16 +34,120 @@
 </head>
 
 <body>
-	
+	<div id="wrapper">
+		<header layout:fragment="sidebar">
+			<nav class="navbar-default navbar-static-side" role="navigation">
+				<div class="sidebar-collapse">
+					<ul class="nav metismenu" id="side-menu">
+						<li class="nav-header">
+							<div class="dropdown profile-element">
+								<span> <img alt="image" src="img/logo.png" />
+								</span>
+							</div>
+							<div class="logo-element">CBE</div>
+						</li>
+						<li class="active"><a href="index-2.html"><i
+								class="fa fa-th-large"></i> <span class="nav-label">CBE
+									Reports 1</span> <span class="fa arrow"></span></a>
+							<ul class="nav nav-second-level">
+								<li><a href="dashboard_2.html">CBE 1.1</a></li>
+								<li><a href="dashboard_3.html">CBE 1.2</a></li>
+								<li><a href="dashboard_4_1.html">CBE 1.3</a></li>
+								<li><a href="dashboard_5.html">CBE 1.4</a></li>
+							</ul></li>
+						<li><a href="index-2.html"><i class="fa fa-th-large"></i>
+								<span class="nav-label">CBE Reports 2</span> <span
+								class="fa arrow"></span></a>
+							<ul class="nav nav-second-level">
+								<li><a href="dashboard_2.html">CBE 2.1</a></li>
+								<li><a href="dashboard_3.html">CBE 2.2</a></li>
+								<li><a href="dashboard_4_1.html">CBE 2.3</a></li>
+								<li><a href="dashboard_5.html">CBE 2.4</a></li>
+							</ul></li>
+						<li><a href="index-2.html"><i class="fa fa-th-large"></i>
+								<span class="nav-label">CBE Reports 3</span> <span
+								class="fa arrow"></span></a>
+							<ul class="nav nav-second-level">
+								<li><a href="dashboard_2.html">CBE 3.1</a></li>
+								<li><a href="dashboard_3.html">CBE 3.2</a></li>
+								<li><a href="dashboard_4_1.html">CBE 3.3</a></li>
+								<li><a href="dashboard_5.html">CBE 3.4</a></li>
+							</ul></li>
+						<li><a href="index-2.html"><i class="fa fa-th-large"></i>
+								<span class="nav-label">CBE Reports 4</span> <span
+								class="fa arrow"></span></a>
+							<ul class="nav nav-second-level">
+								<li><a href="dashboard_2.html">CBE 4.1</a></li>
+								<li><a href="dashboard_3.html">CBE 4.2</a></li>
+								<li><a href="dashboard_4_1.html">CBE 4.3</a></li>
+								<li><a href="dashboard_5.html">CBE 4.4</a></li>
+							</ul></li>
+
+					</ul>
+
+				</div>
+			</nav>
+		</header>
 
 
-		<div class="footer" th:fragment="footerr">
+		<div id="page-wrapper" class="gray-bg dashbard-1"
+			layout:fragment="header">
+			<div class="row border-bottom">
+				<nav class="navbar navbar-static-top" role="navigation"
+					style="margin-bottom: 0">
+					<div class="navbar-header">
+						<br /> <br /> User number: <input type="text" name=""></input>
+						Operation number:<input type="text" name="lname"></input> <a
+							class="navbar-minimalize minimalize-styl-2 btn btn-primary "
+							href="#"><i class="fa fa-bars"></i> </a>
 
-			<div>
-				<strong>Copyright</strong> CBE &copy; 2018-2019
+					</div>
+					<ul class="nav navbar-top-links navbar-right">
+						<li><a href="login.html"> <i class="fa fa-sign-out"></i>
+								Log out
+						</a></li>
+
+					</ul>
+
+				</nav>
 			</div>
+
+			<section th:fragment="form">
+				<div class="row  border-bottom white-bg dashboard-header">
+
+					<div class="col-md-3">
+						<h2>Welcome Amelia</h2>
+						<small>You have 42 messages and 6 notifications.</small>
+					</div>
+
+				</div>
+			</section>
 		</div>
-	
+	</div>
+
+
+
+
+
+
+
+	<div class="footer">
+
+		<div layout:fragment="footer">
+			<strong>Copyright</strong> CBE &copy; 2018-2019
+		</div>
+	</div>
+
+	<div class="small-chat-box fadeInRight animated">
+
+		<div class="heading" draggable="true">
+			<small class="chat-date pull-right"> 02.19.2015 </small> Small chat
+		</div>
+
+
+
+
+	</div>
 
 
 

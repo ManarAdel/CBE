@@ -53,6 +53,10 @@ public class CbrDataSource implements Serializable {
 	@OneToMany(mappedBy="cbrDataSource")
 	private List<CbrDataDict> cbrDataDicts;
 
+	
+
+	
+	
 	public CbrDataSource() {
 	}
 
