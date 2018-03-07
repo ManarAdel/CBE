@@ -34,7 +34,7 @@ public class CbrDataSource implements Serializable {
 
 	private String owner;
 
-	@Column(name="\"PATH\"")
+	@Column(name="PATH")
 	private String path;
 
 	@Column(name="SHEET_NAME")

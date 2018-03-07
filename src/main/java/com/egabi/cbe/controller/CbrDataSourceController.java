@@ -19,7 +19,7 @@ public class CbrDataSourceController {
 	CbrDataSourceService service;
 	
 	@RequestMapping(value = "/insert" , method = RequestMethod.POST)
-	public String saveCbrDataSource(@RequestBody CbrDataSource c)
+	public String saveCbrDataSource( CbrDataSource c)
 	{
 		return service.insertCbrDataSource(c);
 		

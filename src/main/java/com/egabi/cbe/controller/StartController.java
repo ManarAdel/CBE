@@ -8,15 +8,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.egabi.cbe.model.CbrDataSource;
-import com.egabi.cbe.service.CbrDataSourceService;
+
 
 @Controller
-public class TemplateController {
+public class StartController {
+	
 	
 	
 	
 	@Autowired
-	CbrDataSourceService service;
+	CbrDataSourceController cont;
 	
 	/*@RequestMapping("/header")
 	public String header(Model model) {
@@ -36,10 +37,16 @@ public class TemplateController {
 		return "footer";
 	}*/
 	
+	
+	
+	
+	
 	@RequestMapping(value="/home", method=RequestMethod.POST)
-	public String homee(Model model , @ModelAttribute CbrDataSource data) {
-		//model.addAttribute("id" , "");
-		model.addAttribute("CbrDataSource" , data);
+	public String homee(Model model , @ModelAttribute ("CbrDataSource") CbrDataSource data) {
+		
+		model.addAttribute("CbrDataSource");
+		
+		
 		
 		model.addAttribute("sourceName" , data.getSourceName());
 		model.addAttribute("aname" , data.getAname());
@@ -53,15 +60,17 @@ public class TemplateController {
 		model.addAttribute("sourceType" , data.getSourceType());
 		model.addAttribute("startingLine" , data.getStartingLine());
 		model.addAttribute("tableName" , data.getTableName());
+	
+		cont.saveCbrDataSource(data);
 		
 		return "home";
 	}
 	
 	@RequestMapping(value="/home", method=RequestMethod.GET)
 	public String home(Model model , @ModelAttribute CbrDataSource data) {
-		//model.addAttribute("id" , "");
 		model.addAttribute("CbrDataSource" , data);
 		 
+		/*
 		model.addAttribute("sourceName" , data.getSourceName());
 		model.addAttribute("aname" , data.getAname());
 		model.addAttribute("ename" , data.getEname());
@@ -75,16 +84,13 @@ public class TemplateController {
 		model.addAttribute("startingLine" , data.getStartingLine());
 		model.addAttribute("tableName" , data.getTableName());
 		
+		*/
+		
 		return "home";
 	}
 	
 	 
-	/*@RequestMapping(value = "/home" , method=RequestMethod.GET)
-	public String home(Model model) {
-		//model.addAttribute("id" , "");
-		model.addAttribute("CbrDataSource" ,service.insertCbrDataSource(new CbrDataSource()));
-		return "home";
-	}*/
+	
 	
 	
 }
