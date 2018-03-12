@@ -2,6 +2,9 @@ package com.egabi.cbe.model;
 
 import java.io.Serializable;
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+
 import java.math.BigDecimal;
 import java.util.List;
 
@@ -19,7 +22,9 @@ public class CbrDataSource implements Serializable {
 	@Id
 	@Column(name="SOURCE_NAME")
 	private String sourceName;
-
+	
+	
+	@Pattern(regexp="^[\\u0621-\\u064A0-9 ]+$" , message="Please enter an arabic name")
 	private String aname;
 
 	@Column(name="DATE_FORMAT")

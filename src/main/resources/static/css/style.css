@@ -314,6 +314,7 @@ body.mini-navbar .navbar-default .nav > li > .nav-second-level li a {
   display: none;
   padding: 18px 0;
 }
+/*to resolve big height before the form */
 .pace-done .navbar-static-side,
 .pace-done .nav-header,
 .pace-done li.active,
@@ -323,7 +324,9 @@ body.mini-navbar .navbar-default .nav > li > .nav-second-level li a {
   -moz-transition: all 0.4s;
   -o-transition: all 0.4s;
   transition: all 0.4s;
-}
+  min-height: 0px !important;
+ /* position: relative !important;*/
+ }
 .navbar-fixed-top {
   background: #fff;
   transition-duration: 0.4s;
@@ -3493,6 +3496,7 @@ body.full-height-layout #page-wrapper {
 }
 #page-wrapper {
   min-height: auto;
+  
 }
 body.boxed-layout {
   background: url('patterns/shattered.png');
@@ -3641,7 +3645,10 @@ video {
 #page-wrapper {
   padding: 0 15px;
   min-height: 568px;
-  position: relative !important;
+  position: absolute !important;
+  width: 100%;
+  height: 100%;
+  
 }
 @media (min-width: 768px) {
   #page-wrapper {
@@ -8559,4 +8566,11 @@ body.md-skin {
   #page-wrapper {
     margin: 0;
   }
+}
+
+
+/*08-03-2018*/
+.btnHeader {
+	position: relative;
+    top: -15px;
 }

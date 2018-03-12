@@ -1,8 +1,11 @@
 package com.egabi.cbe.controller;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -42,7 +45,12 @@ public class StartController {
 	
 	
 	@RequestMapping(value="/home", method=RequestMethod.POST)
-	public String homee(Model model , @ModelAttribute ("CbrDataSource") CbrDataSource data) {
+	public String homee(@Valid CbrDataSource src , BindingResult bindingresult , Model model , @ModelAttribute ("CbrDataSource") CbrDataSource data ) {
+		
+		if(bindingresult.hasErrors()) {
+			return "home";
+		}
+		
 		
 		model.addAttribute("CbrDataSource");
 		
@@ -67,7 +75,7 @@ public class StartController {
 	}
 	
 	@RequestMapping(value="/home", method=RequestMethod.GET)
-	public String home(Model model , @ModelAttribute CbrDataSource data) {
+	public String home(Model model , @ModelAttribute ("CbrDataSource") CbrDataSource data , BindingResult bindingresult) {
 		model.addAttribute("CbrDataSource" , data);
 		 
 		/*
