@@ -13,10 +13,11 @@ import javax.persistence.*;
 @NamedQuery(name="CbrDataDict.findAll", query="SELECT c FROM CbrDataDict c")
 public class CbrDataDict implements Serializable {
 	private static final long serialVersionUID = 1L;
-
+	
 	@EmbeddedId
 	private CbrDataDictPK id;
 
+	
 	private String aname;
 
 	private String ename;

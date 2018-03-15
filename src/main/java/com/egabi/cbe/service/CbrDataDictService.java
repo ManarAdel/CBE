@@ -1,5 +1,7 @@
 package com.egabi.cbe.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -22,6 +24,10 @@ public class CbrDataDictService {
 		c.setAname(view.getAname());
 		repo.saveAndFlush(c);
 		return "Added";
+	}
+	
+	public List<CbrDataDict> getAll(){
+		return repo.findAll();
 	}
 
 }

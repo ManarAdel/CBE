@@ -14,94 +14,98 @@
 <link href="css/animate.css" rel="stylesheet" />
 <link href="css/style.css" rel="stylesheet" />
 
+
 <head>
 <title>first CBE page</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
-<body>
 
+<body>
 	<div id="wrapper">
 		<div th:include="sidebar :: sidebarr"></div>
 
-		<!--  	<div th:replace="header :: headerr">-->
+		<form action="#" th:action="@{/CBEDataDict}"
+			th:object="${CbrDataDictView}" method="post" id="page-wrapper"
+			class="gray-bg dashbard-1">
+
+	<!-- 		<p th:text="'Hello, ' + ${name} + '!'" />
+
+			<select th:field="*{aname}">
+				<option value="default">Select Aname</option>
+				<option th:each="aname : ${aname}" th:value="${CbrDataDictView.aname}"
+					th:text="${aname}" />
+
+			</select> <select th:field="*{ename}">
+				<option value="default">Select Ename</option>
+				<option th:each="ename : ${ename}" th:value="${CbrDataDictView.ename}"
+					th:text="${ename}" />
 
 
+			</select>   -->
 
-		<form action="#" th:action="@{/home}" th:object="${CbrDataSource}"
-			method="post" id="page-wrapper" class="gray-bg dashbard-1">
 			<p>
-				Source Name: <input type="text" th:field="*{sourceName}" />
-			</p>
-			<p>
-				ANAME: <input type="text" th:field="*{aname}" /> 
-				<span th:if="${#fields.hasErrors('aname')}" th:errors="*{aname}">Name
-					Error</span>
+				ANAME: <input type="text" th:field="*{aname}" />
+				<!-- 	<span th:if="${#fields.hasErrors('aname')}" th:errors="*{aname}">Name
+					Error</span>   -->
 			</p>
 			<p>
 				ENAME: <input type="text" th:field="*{ename}" />
 			</p>
 
-			<p>
-				DELIMITER: <input type="text" th:field="*{delimiter}" />
-			</p>
-			<p>
-				DATE FORMAT: <input type="text" th:field="*{dateFormat}" />
-			</p>
-			<p>
-				IDENTYPE: <select th:field="*{idenType}">
-					<option value=";">1</option>
-					<option value=";">2</option>
-					<option value=";">3</option>
-					<option value=",">4</option>
-				</select>
-			</p>
-			<p>
-				OWNER: <input type="text" th:field="*{owner}" />
-			</p>
-			<p>
-				PATH: <input type="text" th:field="*{path}" />
-			</p>
-			<p>
-				SHEETNAME: <input type="text" th:field="*{sheetName}" />
-			</p>
-			<p>
-				SOURCE TYPE: <select th:field="*{sourceType}">
-					<option value="CSV">1</option>
-					<option value="CSV">2</option>
-					<option value="CSV">3</option>
-					<option value="V">4</option>
-				</select>
+
+			<!-- 
+			<table border="">
+				
+				<tr>
+					<td><label th:text="Aname" /></td>
+			
+					<td>
+					<select th:field="*{dropdownSelectedValue}">
+					<option value="0" th:text="select operator" ></option>
+					<option th:each="dropdownValue: ${singleSelectAllValues}"
+							th:value="${dropdownValue}" th:text="${dropdownValue}"></option>
+					</select></td>
+				</tr>
+
+				a<tr>
+					<td><label th:text="Aname" /></td>
+			
+					<td><select th:field="*{dropdownSelectedValue}">
+						<option th:each="dropdownValue: ${singleSelectAllValues}"
+								th:value="${dropdownValue}" th:text="${dropdownValue}"></option>
+					</select></td>
+				</tr>
+				
+		
+				<tr>
+					<td><label th:text="Aname"></label></td>
+
+					<td><input type="text" id="aname" name="aname"
+						th:field="*{aname}" th:value="*{aname}" /></td>
+				</tr>
+
+				<tr>
+					<td><label th:text="Ename"></label></td>
+
+					<td><input type="text" id="ename" name="ename"
+						th:field="*{ename}" th:value="*{ename}" /></td>
+
+				</tr>
+
+				<tr>
+					<td><input type="submit" value="Submit" /></td>
+				</tr>
 
 
-				<!--  		<select th:field="${operator.sourceType}" id="dropOperator">
-							<option value="0" th:text="select operator"></option>
-							<option th:each="operator : ${operators}"
-								th:value="${operator.id}" th:text="${operator.operatorName}"></option>
-						</select>-->
-
-
-
-
-			</p>
-			<p>
-				STARTING LINE: <input type="text" th:field="*{startingLine}" />
-			</p>
-			<p>
-				TABLE NAME: <input type="text" th:field="*{tableName}" />
-			</p>
-
-			<p>
-				<input type="submit" value="Submit" />
-			</p>
-
+			</table>-->
 		</form>
+
+		<div th:include="footer :: footerr"></div>
 	</div>
 
 
 
-	<footer>
-		<div th:include="footer :: footerr"></div>
-	</footer>
+
 
 
 
@@ -145,7 +149,7 @@
 	<!-- Toastr -->
 	<script src="js/plugins/toastr/toastr.min.js"></script>
 
+
+
 </body>
-
 </html>
-
